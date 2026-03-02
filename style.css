@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
@@ -12,55 +12,59 @@ body {
 
 .container {
   width: 90%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
 }
 
 header {
   padding: 20px 0;
   background: #0f172a;
+  position: sticky;
+  top: 0;
 }
 
-header h1 {
-  font-size: 24px;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
   color: #22c55e;
+  font-size: 22px;
 }
 
-header nav {
-  float: right;
-}
-
-header nav a {
-  color: white;
+nav a {
   margin-left: 20px;
   text-decoration: none;
+  color: white;
   opacity: 0.8;
 }
 
-header nav a:hover {
+nav a:hover {
   opacity: 1;
 }
 
 .hero {
-  padding: 100px 0;
+  padding: 120px 0;
   text-align: center;
   background: linear-gradient(135deg, #16a34a, #22c55e);
 }
 
 .hero h2 {
-  font-size: 40px;
+  font-size: 48px;
   margin-bottom: 20px;
 }
 
 .hero p {
+  font-size: 20px;
   margin-bottom: 30px;
-  font-size: 18px;
 }
 
-.btn {
+.btn-primary {
   background: white;
   color: #16a34a;
-  padding: 12px 25px;
+  padding: 14px 28px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
@@ -71,27 +75,78 @@ header nav a:hover {
   background: #111827;
 }
 
-.grid {
+.grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
-.card {
+.feature-card {
   background: #1f2937;
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 15px;
   transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.feature-card:hover {
+  transform: translateY(-8px);
   background: #22c55e;
   color: black;
 }
 
+.plans {
+  padding: 100px 0;
+  background: #0f172a;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.plan-card {
+  background: #1f2937;
+  padding: 40px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.plan-card ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.plan-card li {
+  margin-bottom: 10px;
+}
+
+.plan-card:hover {
+  transform: scale(1.05);
+}
+
+.highlight {
+  border: 2px solid #22c55e;
+}
+
+.premium {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: black;
+}
+
+.price {
+  font-size: 22px;
+  margin: 15px 0;
+}
+
 footer {
-  padding: 30px 0;
+  padding: 40px 0;
   text-align: center;
   background: #0f172a;
   opacity: 0.7;
